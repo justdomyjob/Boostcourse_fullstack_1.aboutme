@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="kr">
     <meta charset="UTF-8">
-    <head>
-        <title>현재시간</title>
-    </head>
+    <head><title>현재시간</title>
+        
     <body>
-        <a href="./html/index.html">메인화면</a>
+        <a style ="font-size : 30px"  href="./html/index.html">메인화면</a>
+        <div style ="font-size : 50px;  text-align: center; padding : 20% 30%; position :fixed;">
+            <script>
+                var currentDate = new Date(); 
+                var calendar = "현재시간 : "+currentDate.getFullYear() + "/" + (currentDate.getMonth()+1) 
+                + "/" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes(); // 현재 날짜
+                document.write(calendar);
+            </script>
+        </div>
     </body>
 </html>

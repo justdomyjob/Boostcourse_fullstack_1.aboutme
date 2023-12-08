@@ -34,9 +34,17 @@ public class TodayServlet extends HttpServlet {
 		out.println("<!DOCTYPE html>");
 		out.println("<html lang=\"kr\">");
 		out.println("<meta charset=\"UTF-8\">");
-		out.println("<head><title>today</title></head>");
+		out.println("<head><title>현재시간</title></head>");
 		out.println("<body>");
-		out.println("<a href=\"./html/index.html\">메인화면!!</a>");
+		out.println("<a style =\"font-size : 30px\"  href=\"./html/index.html\">메인화면</a>");
+		out.println("<div style =\"font-size : 50px;  text-align: center; padding : 20% 30%; position :fixed;\">");
+		out.println("<script>" 
+             +   "var currentDate = new Date(); " 
+            +  "var calendar = \"현재시간 : \"+currentDate.getFullYear() + \"/\" + (currentDate.getMonth()+1) "
+            +    "+ \"/\" + currentDate.getDate() + \" \" + currentDate.getHours() + \":\" + currentDate.getMinutes(); // 현재 날짜"
+            +    "document.write(calendar);"
+            +"</script>");
+		out.println("</div>")
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

@@ -36,7 +36,7 @@ public class TodayServlet extends HttpServlet {
 		out.println("<meta charset=\"UTF-8\">");
 		out.println("<head><title>today</title></head>");
 		out.println("<body>");
-		out.println("<a href=\"./index.html\">메인화면</a>");
+		out.println("<a href=\"./html/index.html\">메인화면!!</a>");
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

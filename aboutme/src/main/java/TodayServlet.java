@@ -39,12 +39,12 @@ public class TodayServlet extends HttpServlet {
 		out.println("<a style =\"font-size : 30px\"  href=\"./html/index.html\">메인화면</a>");
 		out.println("<div style =\"font-size : 50px;  text-align: center; padding : 20% 30%; position :fixed;\">");
 		out.println("<script>" 
-             +   "var currentDate = new Date(); " 
+             +  "var currentDate = new Date(); " 
             +  "var calendar = \"현재시간 : \"+currentDate.getFullYear() + \"/\" + (currentDate.getMonth()+1) "
-            +    "+ \"/\" + currentDate.getDate() + \" \" + currentDate.getHours() + \":\" + currentDate.getMinutes(); // 현재 날짜"
-            +    "document.write(calendar);"
+            +   "+ \"/\" + currentDate.getDate() + \" \" + currentDate.getHours() + \":\" + currentDate.getMinutes();"
+            +   "document.write(calendar);"
             +"</script>");
-		out.println("</div>")
+		out.println("</div>"); 
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
+import java.util.Formatter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,11 +41,14 @@ public class TodayServlet extends HttpServlet {
 		out.println("<a style =\"font-size : 30px\"  href=\"./html/index.html\">메인화면</a>");
 		out.println("<div style =\"font-size : 50px;  text-align: center; padding : 20% 30%; position :fixed; \">");
 		LocalDateTime currenTime = LocalDateTime.now();
-		out.print("현재시간 :\n" +
-				currenTime.getYear()+"/"+currenTime.getMonthValue()
-				+"/"+currenTime.getDayOfMonth()+" "+ currenTime.getHour()
-				+":"+currenTime.getMinute());
+		StringBuffer sb = new StringBuffer();
+		Formatter f = new Formatter(sb);
 		//현재시간 : 2023/12/14 20:34
+		f.format("현재 시간 :\n %d/%d/%d %d:%d",
+				currenTime.getYear(), currenTime.getMonthValue(),
+				currenTime.getDayOfMonth(),currenTime.getHour()
+				,currenTime.getMinute());
+		out.println(f);
 		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");

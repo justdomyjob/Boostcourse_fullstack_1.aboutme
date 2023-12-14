@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,11 +39,12 @@ public class TodayServlet extends HttpServlet {
 		out.println("<body>");
 		out.println("<a style =\"font-size : 30px\"  href=\"./html/index.html\">메인화면</a>");
 		out.println("<div style =\"font-size : 50px;  text-align: center; padding : 20% 30%; position :fixed; \">");
-		out.println("<script>");
-		out.println("var currentDate = new Date();");
-		out.println("var calendar = \"현재시간 : \"+currentDate.getFullYear() + \"/\" + (currentDate.getMonth()+1) + \"/\" + currentDate.getDate() + \" \" + currentDate.getHours() + \":\" + currentDate.getMinutes();");
-		out.println("document.write(calendar);"); 
-		out.println("</script>");
+		LocalDateTime currenTime = LocalDateTime.now();
+		out.print("현재시간 :\n" +
+				currenTime.getYear()+"/"+currenTime.getMonthValue()
+				+"/"+currenTime.getDayOfMonth()+" "+ currenTime.getHour()
+				+":"+currenTime.getMinute());
+		//현재시간 : 2023/12/14 20:34
 		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");

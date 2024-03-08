@@ -1,0 +1,46 @@
+*{
+    text-align: center;
+}
+
+html, body{
+    height: 100%;
+}
+#headerwrap{
+    overflow:auto;
+    margin-bottom : 30px;
+}
+a{
+    display: block;
+    float : right;  
+    width : 8%;
+    margin-left : 2%;
+    font-size: 15px;
+    color : rgb(176, 23, 223);
+    background-color: rgb(146, 226, 35);
+    text-align: center;
+    padding : 10px 20px;
+    box-shadow: 4px 4px 5px 2px gray;
+    margin :10px 5px;
+}
+#mainwrap{
+    height : 50%;
+    margin-top:10px;
+    border : 5px solid gray;
+    clear: both;   
+}
+.photo#below{
+    margin-right: 39%;
+    margin-left: 3%;
+    padding : 4% 10px;
+    width : 8%;
+}
+.aboutme#below{
+    padding : 4% 10px;
+    width : 8%;
+}
+img{
+    display: block;
+    clear: both;
+    margin: auto;
+    width :30%;
+}

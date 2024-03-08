@@ -1,0 +1,63 @@
+
+html, body{
+    height: 100%;
+}
+#headerwrap{
+    overflow:auto;
+    margin-bottom : 30px;
+}
+a{
+    text-align: center;
+    display: block;
+    float : right;  
+    width : 8%;
+    margin-left : 2%;
+    font-size: 15px;
+    color : rgb(176, 23, 223);
+    background-color: rgb(146, 226, 35);
+    text-align: center;
+    padding : 10px 20px;
+    box-shadow: 4px 4px 5px 2px gray;
+    margin :10px 5px;
+}
+
+h1{
+    text-align : start;
+}
+
+#mainwrap{
+    height: 80%;
+    border : 5px solid gray;
+}
+main>div#firstwrap{
+    border-bottom : 2px solid gray;
+}
+img{
+    box-shadow: 4px 4px 5px 2px gray;
+    margin : auto;
+    float: left;
+    position : relative;
+    top : 10%;
+    width: 30%;
+}
+
+div>p{
+    margin-top : 10%;
+    margin-left : 5%;
+    width : 50%;
+    float: left;
+    text-align : start;
+    font-size : 12px;
+    word-spacing : 1px;
+}
+
+div.main{
+    height: 50%;
+    padding : 0 10%;
+    /* border : 5px solid gray; */
+    clear: both;   
+}
+footer{
+    text-align: center;
+}
+
